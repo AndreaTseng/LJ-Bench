@@ -1,0 +1,62 @@
+{
+  "@type": "sc:Dataset",
+  "name": "LJ-Bench",
+  "description": "This is a minimal example, including the required and the recommended fields.",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "url": "https://anonymous.4open.science/r/LJ-bench_ontology_crime_LLM-BC96/",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "lj-bench.csv",
+      "name": "lj-bench.csv",
+      "contentUrl": "lj-bench.csv",
+      "encodingFormat": "text/csv",
+      "sha256":"main"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "name": "Type",
+      "description": "Crime type",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "name": "Type",
+          "description": "The first column contains the crime type.",
+          "dataType": "sc:Text",
+          "references": {
+            "fileObject": { "@id": "lj-bench.csv" },
+            "extract": {
+              "column": "Type"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Question",
+          "description": "The second column contains the jaibreaking question for the LLM.",
+          "dataType": "sc:Text",
+          "references": {
+            "fileObject": { "@id": "lj-bench.csv" },
+            "extract": {
+              "column": "Question"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "name": "Category",
+          "description": "The third column contains the category of crime.",
+          "dataType": "sc:Text",
+          "references": {
+            "fileObject": { "@id": "lj-bench.csv" },
+            "extract": {
+              "column": "Category"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

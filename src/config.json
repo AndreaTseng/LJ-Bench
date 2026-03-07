@@ -1,0 +1,20 @@
+{
+    "target_model": "gemini-1.5-pro",
+    "target_model_type": "gemini",
+    "evaluator_model": "gemini-1.5-pro",
+    "input_file": "LJ-Bench.csv", 
+    "past_tense_data": "",
+    "output_dir": "",
+    "attack": "all",
+    "batch_size": 100,
+    "rate_limit": 1.0,
+    "temperature": 1.0,
+    "max_output_tokens": "600",
+    "runs": 1, # the number of times the experiments will be repeated
+    "start_index": 1, #the starting index of the output file if runs > 1
+    "OPENAI_API_KEY": "",
+    "GEMINI_API_KEY": "",
+    "TOGETHER_API_KEY": "",
+    "data_folder": "Data/Prompt",
+    "reasoning_effort": "low"
+}
